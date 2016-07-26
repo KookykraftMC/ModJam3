@@ -27,7 +27,7 @@ import java.util.UUID;
 public class TileEntityBreaker extends TileEntityClusterElement implements IInventory, IPacketBlock {
 
     private static final String FAKE_PLAYER_NAME = "[SFM_PLAYER]";
-    private static final UUID FAKE_PLAYER_ID = null;
+    private static final UUID FAKE_PLAYER_ID = UUID.fromString("5bdd6a50-52f4-11e6-beb8-9e71128cae77");
     private List<ItemStack> inventory;
     private List<ItemStack> inventoryCache;
     private boolean broken;
@@ -326,7 +326,7 @@ public class TileEntityBreaker extends TileEntityClusterElement implements IInve
     }
 
     private boolean canBreakBlock(Block block, int x, int y, int z) {
-        return block != null && Block.getIdFromBlock(block) != Block.getIdFromBlock(Blocks.bedrock) && block.getBlockHardness(worldObj, x, y, z) >= 0;
+        return false;
     }
 
     @Override
